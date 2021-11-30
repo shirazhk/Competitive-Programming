@@ -30,6 +30,6 @@ public class firstCharacterThatOccursTwice {
         if(charOccursTwice==false)
         {
             System.out.println("No element occurs twice.");
-        }
+        }//printing message if no character occurs twice
     }
 }
