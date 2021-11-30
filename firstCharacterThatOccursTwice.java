@@ -17,17 +17,19 @@ public class firstCharacterThatOccursTwice {
                 map.putIfAbsent(str.charAt(i), 1);
             }
         }//elements put into map with frequency values
+        boolean charOccursTwice = false;
         for(Map.Entry<Character, Integer> e:map.entrySet())
         {
             if(e.getValue()==2 && e.getKey()!=str.charAt(str.length()-1))
             {
                 System.out.println("First character to occur twice: "+e.getKey());
+                charOccursTwice = true;
                 break;
             }
-            else if(e.getKey()==str.charAt(str.length()-1) && e.getValue()!=2)
-            {
-                System.out.println("No element occurs twice");
-            }
+        }
+        if(charOccursTwice==false)
+        {
+            System.out.println("No element occurs twice.");
         }
     }
 }
